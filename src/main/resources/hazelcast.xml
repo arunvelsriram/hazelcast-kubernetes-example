@@ -61,9 +61,9 @@
                 <discovery-strategy enabled="true"
                                     class="com.hazelcast.kubernetes.HazelcastKubernetesDiscoveryStrategy">
                     <properties>
-                        <property name="service-name">my-service</property>
-                        <property name="service-label-name">name</property>
-                        <property name="service-label-value">hazelcast</property>
+                        <property name="service-name">hazelcast-service</property>
+                        <property name="service-label-name"/>
+                        <property name="service-label-value"/>
                         <property name="namespace">default</property>
                     </properties>
                 </discovery-strategy>
