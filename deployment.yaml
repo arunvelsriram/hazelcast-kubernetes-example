@@ -1,0 +1,20 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: hazelcast-deployment
+  labels:
+    app: hazelcast-kubernetes-example
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: hazelcast-kubernetes-example
+  template:
+    metadata:
+      labels:
+        app: hazelcast-kubernetes-example
+    spec:
+      containers:
+      - name: hazelcast-kubernetes-example
+        image: arunvelsriram/hazelcast-kubernetes-example
+        imagePullPolicy: Always
